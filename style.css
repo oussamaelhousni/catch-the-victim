@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  background-color: #3498db;
+  color: white;
+}
+a{
+  color: #fff;
+}
+h1{
+  line-height: 1.4;
+}
+.btn{
+  background-color: white;
+  border: 0;
+  color: #3498db;
+  padding: 15px 20px;
+  outline: none;
+  font-size: 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn:hover{
+  opacity: 0.9;
+}
+.screen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  transition: margin 0.3s ease-out;
+}
+.choose-player-btn img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.players-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+.players-list li{
+  margin:10px
+}
+
+.choose-player-btn{
+  background-color: transparent;
+  border: 2px solid white;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+.choose-player-btn:hover{
+  background-color: white;
+  color: #3498db;
+}
+
+.choose-player-btn:active{
+  background-color: rgba(255,255,255,0.6);
+}
+
+.screen.up{
+  margin-top: -100vh;
+}
+
+.game-container{
+   position: relative;
+}
+
+#time,#score{
+  position: absolute;
+  top:20px
+}
+
+#time{
+  left: 15px;
+}
+
+#score{
+  right: 30px;
+}
+
+.victim{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%,-50%) scale(1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+
+.victim.caught{
+  transform: translate(-50%,-50%) scale(0);
+}
+
+.victim img{
+  width: 100px;
+  height: 100px;
+}
